@@ -2,6 +2,9 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from strategy import run_strategy
 from strategy import calculate_rsi
+from strategy import squeeze_momentum
+from strategy import plot_squeeze
+import sm
 
 st.title("Moving Average Crossover Strategy")
 
@@ -37,4 +40,13 @@ if st.button("Run Strategy"):
     ax.legend()
     st.pyplot(fig)
 
+    sm.lazybear_squeeze_momentum(data)
+    sm.plot_lazybear_squeeze(data, ticker)
+    
+
+
+
+
+    
+    
 
