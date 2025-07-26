@@ -6,7 +6,7 @@ from strategy import squeeze_momentum
 from strategy import plot_squeeze
 import sm
 
-st.title("Moving Average Crossover Strategy")
+st.title("Moving Average Crossover (with RSI) Strategy")
 
 #sidebar
 st.sidebar.header("Strategy Parameters")
