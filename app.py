@@ -24,12 +24,15 @@ if st.button("Run Strategy"):
         "Market Return": data["cumulative_market"],
         "Strategy Return": data["cumulative_strategy"]
     }
-
-    st.metric(label="Return", value=f"{total_return:.2%}", delta=f"{-1*(data["cumulative_market"].iloc[-1] - 1- total_return):.2%}")
-
+    
     st.subheader("Performance Metrics")
     st.write(f"**Total Return:** {total_return:.2%}")
     st.write(f"**Sharpe Ratio:** {sharpe:.2f}")
+
+
+    st.metric(label="Return", value=f"{total_return:.2%}", delta=f"{-1*(data["cumulative_market"].iloc[-1] - 1- total_return):.2%}")
+
+
 
     st.area_chart(combined_data, use_container_width=True)
    
